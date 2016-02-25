@@ -1,0 +1,66 @@
+<script type="text/javascript"> 
+var i = 0; 
+var image = new Array();   
+// LIST OF IMAGES 
+image[0] = "img1.jpg"; 
+image[1] = "img2.jpg"; 
+image[2] = "img3.jpg";   
+image[3] = "img4.jpg";
+image[4] = "img5.jpg";
+var k = image.length-1;    
+var caption = new Array(); 
+
+// LIST OF CAPTIONS 
+caption[0] = "first image"; 
+caption[1] = "second image"; 
+caption[2] = "third image"; 
+caption[3] = "fourth image"; 
+caption[4] = "fifth image"; 
+
+function next(){
+	var el = document.getElementById("mydiv"); 
+	el.innerHTML=caption[i]; 
+	var img= document.getElementById("slide"); 
+	img.src= image[i]; 
+	if(i < k ) 
+		i++;
+	else  
+		i = 0; 
+}
+
+function prev()
+{
+	var el = document.getElementById("mydiv"); 
+	el.innerHTML=caption[i]; 
+	var img= document.getElementById("slide"); 
+	img.src= image[i]; 
+	if(i >0 ) 
+		i--;
+	else  
+		i = k;
+}
+
+
+</script> 
+<table style="border:none;background-color:transparent;"> 
+<tr> 
+<td>
+<img onclick="prev()" title="Previous" alt ="Prev" height="50" width="50"src="prev.jpg"/> 
+</td>
+<td> 
+<img name="slide" id="slide" alt ="my images" height="600" width="600" src="img1.jpg"/> 
+</td> 
+<td>
+<img onclick="next()" title="Next" alt ="Next" height="50" width="50" src="next.jpg"/> 
+</td>
+</tr> 
+<tr> 
+<td>
+</td>
+<td align="center"style="font:small-caps bold 15px georgia; color:blue;"> 
+<div id ="mydiv"></div>
+</td> 
+<td>
+</td>
+</tr>  
+</table>

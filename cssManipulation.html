@@ -1,0 +1,53 @@
+<html>
+	<style> </style>
+<body>
+<h4> Enter numbers between 0 and 255 for border </h4>
+			<form>
+				 <input type="text" id="redBor"> Red value <br>
+				  <input type="text" id="greenBor">Green value  <br>
+				  <input type="text" id="blueBor"> Blue value: <br>
+				 <input type="text" id="widthB">Width  <br>	 
+					<br>
+				
+					<h4> Enter numbers from 0 to 255 for background color	</h4>
+					<input type="text" id="redB"> 	Red background value <br>
+					 <input type="text" id="greenB"> Green background value<br>
+					 <input type="text" id="blueB"> Blue background value<br>
+			</form>	
+		
+		<br>
+		<button onclick="change()"> Submit </button>
+
+
+<p id="para">Holi is an important festival to Hindus. It is celebrated at the end of winter, on the last full moon day of the lunar month Phalgun (February/March), (Phalgun Purnima), which usually falls in March, sometimes in late February.
+<br>
+The festival has many purposes; most prominently, it celebrates the beginning of Spring. In 17th century literature, it was identified as a festival that celebrated agriculture, commemorated good spring harvests and the fertile land. Hindus believe it is a time of enjoying spring's abundant colours and saying farewell to winter. To many Hindus, Holi festivities mark the beginning of the new year as well as an occasion to reset and renew ruptured relationships, end conflicts and rid themselves of accumulated emotional impurities from the past.
+<br>
+It also has a religious purpose, symbolically signified by the legend of Holika. The night before Holi, bonfires are lit in a ceremony known as Holika Dahan (burning of Holika) or Little Holi. People gather near fires, sing and dance. The next day, Holi, also known as Dhuli in Sanskrit, or Dhulheti, Dhulandi or Dhulendi, is celebrated. Children and youth spray coloured powder solutions (gulal) at each other, laugh and celebrate, while adults smear dry coloured powder (abir) on each other's faces. Visitors to homes are first teased with colours, then served with Holi delicacies, desserts and drinks. After playing with colours, and cleaning up, people bathe, put on clean clothes, and visit friends and family.
+<br>
+Like Holika Dahan, Kama Dahanam is celebrated in some parts of India. The festival of colours in these parts is called Rangapanchami, and occurs on the fifth day after Poornima (full moon).</p>
+
+<script>
+function change() {
+	
+	var r_bor = document.getElementById("redBor").value;
+	var g_bor = document.getElementById("greenBor").value;
+	var b_bor = document.getElementById("blueBor").value;
+	
+	var w_bor = document.getElementById("widthB").value;
+
+	var r_b = document.getElementById("redB").value;
+	var g_b = document.getElementById("greenB").value;
+	var b_b = document.getElementById("blueB").value;
+	
+	//var color_background = 'rgb(r_b, g_b, b_b)';
+	
+	var p = document.getElementById("para");
+	
+	p.style.backgroundColor = 'rgb(' +r_b+ ',' +g_b+ ',' +b_b+ ')';
+	p.style.borderColor = 'rgb(' +r_bor+ ',' +g_bor+ ',' +b_bor+ ')';
+	p.style.borderWidth = w_bor+ 'px';
+}
+</script>
+</body>
+</html>
